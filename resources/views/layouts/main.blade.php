@@ -57,7 +57,7 @@
 <div class="container">
   <div class="flex flex-wrap">
   <div class="w-full px-4 mb-12 text-white md:w-1/3 font-Inter">
-    <img  class="bg-white rounded-full mb-5 hover:bg-blue-500"src="{{ asset('images/logo/walhi-logo.png') }}" alt="logo">
+    <img  class="bg-white rounded-full mb-5 hover:bg-blue-500"src="{{ asset('images/logo/WALHI.png') }}" alt="logo">
     <h2 class="font-bold text-2xl mb-5">WAHANA LINGKUNGAN HIDUP INDONESIA</h2>
     <p class="">Jln. Tegal Parang Utara No 14, Jakarta Selatan 12790. Indonesia</p>
   </div>
@@ -76,7 +76,7 @@
       <img class="inline-block" src="{{ asset('images/logo/email-logo.png') }}" alt="email-logo"> informasi@walhi.or.id
       </h3>
       <h3 class="font-bold text-base mb-8 ml-5 text-white font-Inter">
-      <img class="inline-block" src="{{ asset('images/logo/facebook-logo.png') }}" alt="facebook-logo">  WALHI
+      <img class="inline-block" src="{{ asset('images/logo/facebook-logo.png') }}" alt="facebook-logo">   WALHI
       </h3>
       <h3 class="font-bold text-base mb-8 text-white font-Inter">
       <img class="inline-block" src="{{ asset('images/logo/twitter-logo.png') }}" alt="twitter-logo"> @ walhinasional
