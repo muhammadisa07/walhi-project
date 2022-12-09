@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style> @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); </style>
  
+<script type="text/javascript" src="{{ URL::asset('js/jquery-3.6.1.js') }}"></script>
   @vite('resources/css/app.css')
   <title >Walhi | {{ $title }} </title>
 </head>
