@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\WahiController;
+use App\Http\Controllers\WalhiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [WahiController::class, 'home']);
+Route::get('/', [WalhiController::class, 'home']);
+Route::get('/plingkungan', [WalhiController::class, 'PLingkungan']);

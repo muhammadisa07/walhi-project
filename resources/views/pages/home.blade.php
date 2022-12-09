@@ -44,7 +44,7 @@
 <section class="dashboard pt-36 pb-32">
     <div class="container">
     <div class="max-w-xl mx-auto text-center mt-10">
-      <h4 class="font-bold text-xl font-Inter text-white md:text-2xl lg:text-3xl">Dashboard</h4>
+      <h4 class="font-bold text-xl font-Inter text-white md:text-2xl lg:text-3xl mb-16">Dashboard</h4>
     </div>
     </div>
     <div class="flex flex-wrap">

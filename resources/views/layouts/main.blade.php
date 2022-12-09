@@ -6,7 +6,7 @@
   <style> @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); </style>
  
   @vite('resources/css/app.css')
-  <title >Walhi | Home </title>
+  <title >Walhi | {{ $title }} </title>
 </head>
 <body class="bg-gradient-to-b from-emerald-300 via-primary to-emerald-300">
 {{-- Navbar  start --}}
@@ -25,24 +25,28 @@
     <nav id="nav-menu" class="hidden absolute py-5 bg-green2 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
       <ul class="block lg:flex">
       <li class="group">
-      <a href="#home" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter  flex">BERANDA </a>
+      <a href="/" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter  flex">BERANDA </a>
       </li>
       <li class="group">
-      <a href="#home" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">PANTAU LINGKUNGAN </a>
+      <a href="/plingkungan" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">PANTAU LINGKUNGAN </a>
       </li>
       <li class="group">
-      <a href="#home" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">DASHBOARD </a>
+      <a href="/dashboard" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">DASHBOARD </a>
       </li>
       <li class="group">
-      <a href="#home" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">ARTIKEL </a>
+      <a href="/artikel" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">ARTIKEL </a>
       </li>
       <li class="group">
-      <a href="#home" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">LAPOR </a>
+      <a href="/lapor" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">LAPOR </a>
       </li>
       <li class="group">
-      <a href="#home" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">FAQ </a>
+      <a href="/faq" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">FAQ </a>
+      </li>
+       <li class="group">
+      <a href="#" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex"><img src="{{ asset('images/logo/logo-logout.png') }}" alt=""> </a>
       </li>
       </ul>
+      
     </nav>
   </div>
 </div>
@@ -76,7 +80,7 @@
       <img class="inline-block" src="{{ asset('images/logo/email-logo.png') }}" alt="email-logo"> informasi@walhi.or.id
       </h3>
       <h3 class="font-bold text-base mb-8 ml-5 text-white font-Inter">
-      <img class="inline-block" src="{{ asset('images/logo/facebook-logo.png') }}" alt="facebook-logo">   WALHI
+      <img class="inline-block" src="{{ asset('images/logo/facebook-logo.png') }}" alt="facebook-logo"><span class="ml-5">WALHI</span>
       </h3>
       <h3 class="font-bold text-base mb-8 text-white font-Inter">
       <img class="inline-block" src="{{ asset('images/logo/twitter-logo.png') }}" alt="twitter-logo"> @ walhinasional
