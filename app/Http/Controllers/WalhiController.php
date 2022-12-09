@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class WalhiController extends Controller
 {
-    public function home()
+    public function Home()
     {
         return view('pages.home', [
             'title' => 'Home'
@@ -20,28 +20,28 @@ class WalhiController extends Controller
         ]);
     }
     // menampilkan halaman dashboard
-    public function dashboard()
+    public function Dashboard()
     {
         return view('pages.dashboard', [
             'title' => 'Dashboard'
         ]);
     }
     // menampilkan halaman artikel
-    public function artikel()
+    public function Artikel()
     {
         return view('pages.artikel', [
             'title' => 'Artikel'
         ]);
     }
     // menampilkan halaman laporan
-    public function lapor()
+    public function Lapor()
     {
         return view('pages.lapor', [
             'title' => 'Lapor'
         ]);
     }
     // menampilkan halaman faq
-    public function faq()
+    public function Faq()
     {
         return view('pages.faq', [
             'title' => 'Faq'

@@ -67,12 +67,12 @@
   </div>
   <div class="w-full px-4 mb-12 md:w-1/3">
       <h2 class="font-bold text-2xl mb-5 text-green2">MENU</h2>
-      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="#">BERANDA</a></h3>
-      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="#">PANTAU LINGKUNGAN</a></h3>
-      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="#">DASHBOARD</a></h3>
-      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="#">ARTIKEL</a></h3>
-      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="#">LAPOR</a></h3>
-      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="#">FAQ</a></h3>
+      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="/">BERANDA</a></h3>
+      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="/plingkungan">PANTAU LINGKUNGAN</a></h3>
+      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="/dashboard">DASHBOARD</a></h3>
+      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="/artikel">ARTIKEL</a></h3>
+      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="/lapor">LAPOR</a></h3>
+      <h3 class="font-bold text-xl mb-3 text-white hover:text-blue-500"><a href="/faq">FAQ</a></h3>
   </div>
   <div class="w-full px-4 mb-12 md:w-1/3">
       <h2 class="font-bold text-2xl mb-5 text-green2">KONTAK KAMI</h2>
