@@ -43,7 +43,7 @@
       <a href="/faq" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">FAQ </a>
       </li>
        <li class="group">
-      <a href="#" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex"><img src="{{ asset('images/logo/logo-logout.png') }}" alt=""> </a>
+      <a href="#login" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex"><img src="{{ asset('images/logo/logo-logout.png') }}" alt=""> </a>
       </li>
       </ul>
       

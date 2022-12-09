@@ -33,6 +33,12 @@ class WalhiController extends Controller
             'title' => 'Artikel'
         ]);
     }
+    public function DetailArtikel()
+    {
+        return view('pages.detailartikel', [
+            'title' => 'Artikel'
+        ]);
+    }
     // menampilkan halaman laporan
     public function Lapor()
     {
