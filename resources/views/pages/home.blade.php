@@ -3,7 +3,7 @@
 
 @section('container')
 {{-- Section Hero --}}
-<section id="home" class="pt-20">
+<section id="home" class="pt-36">
     <div class="container">
     <div class="flex flex-wrap">
     {{-- Bagian Kanan --}}
