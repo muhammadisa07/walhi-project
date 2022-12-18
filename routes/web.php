@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WalhiController::class, 'Home']);
 Route::get('/plingkungan', [WalhiController::class, 'PLingkungan']);
+Route::get('/dashboard', [WalhiController::class, 'Dashboard']);
 Route::get('/artikel', [WalhiController::class, 'Artikel']);
 Route::get('/home/artikel', [WalhiController::class, 'DetailArtikel']);
 Route::get('/lapor', [WalhiController::class, 'Lapor']);

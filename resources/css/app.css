@@ -26,3 +26,8 @@ body {
 .hamburger-active > span:nth-child(3) {
     @apply -rotate-45;
 }
+
+#mapid {
+    @apply w-full;
+    height: 594px;
+}
