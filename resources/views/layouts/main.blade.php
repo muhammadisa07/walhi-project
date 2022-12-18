@@ -11,7 +11,9 @@
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery-3.6.1.js') }}"></script>
-  @vite('resources/css/app.css')
+<script type="text/javascript" src="{{ URL::asset('build/assets/app.c7a61920.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('build/assets/app.dd2d5278.css')}}">
+
   <title >Walhi | {{ $title }} </title>
 </head>
 <body class="bg-gradient-to-b from-emerald-300 via-primary to-emerald-300">
