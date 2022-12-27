@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class WalhiController extends Controller
 {
-    public function Home()
+    public function index()
     {
         return view('pages.home', [
             'title' => 'Home'
@@ -53,16 +53,6 @@ class WalhiController extends Controller
             'title' => 'Faq'
         ]);
     }
-    public function login()
-    {
-        return view('pages.loginform', [
-            'title' => 'Login'
-        ]);
-    }
-    public function register()
-    {
-        return view('pages.registerform', [
-            'title' => 'Register'
-        ]);
-    }
+   
+   
 }

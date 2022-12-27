@@ -17,24 +17,48 @@
                                     <div class="text-center">                                   
                                         <img src="{{  asset('images/logo/WALHI.png')}}" alt="">
                                         <h1 class="h4 text-gray-900 mb-4">Login </h1>
+                                        @if($message = Session::get('success'))
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{ $message }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        @endif
+                                        @if($message = Session::get('loginerror'))
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{ $message }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                        @endif
+
                                     </div>
-                                    <form class="user">
+                                    <form class="user" action="/login" method="post">
+                                    @csrf
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
+                                            <input type="text" class="form-control form-control-user @error('email') is-invalid @enderror"
                                                 id="email" name="email"
-                                                placeholder="Enter Email Address...">
+                                                placeholder="Enter Email Address..." value="{{ old('email')  }}" autofocus required> 
+                                                @error('email')
+                                                     <div class="invalid-feedback">
+                                                         {{ $message }}
+                                                      </div>
+                                                @enderror
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input type="password" class="form-control form-control-user @error('password') is-invalid @enderror"
                                             name="password"
-                                                id="password" placeholder="Password">
+                                                id="password" placeholder="Password" required>
+                                                @error('password')
+                                                     <div class="invalid-feedback">
+                                                         {{ $message }}
+                                                      </div>
+                                                @enderror
                                         </div>
                                       
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
                                         
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
+                                        <a href="#" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
                                         </a>
                                     </form>
