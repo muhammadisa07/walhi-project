@@ -50,10 +50,8 @@
       <li class="group">
       <a href="/faq" class="text-base text-white py-2 mx-8 group-hover:text-blue-500 font-Inter flex">FAQ </a>
       </li>
-       <li class="group">
-      <a href="#login" class="text-base bg-green2 rounded-full text-white py-3 px-3  mx-8  group-hover:bg-green1 sm:hover:bg-green2 sm:shadow-none shadow font-Inter flex"><img  src="{{ asset('images/logo/logo-logout.png') }}" alt=""> </a>
-      </li>
-      </ul>
+       
+      </ul> 
       
     </nav>
   </div>
@@ -100,7 +98,7 @@
   </div>
   <div class="w-full pt-10 ">
   <p class="font-medium text-white font-Inter text-center text-sm">
-   Copyright &copy; <em id="date"></em>2022 Pantau Lingkungan
+   Copyright &copy; 2022 Pantau Lingkungan
   </p>
 
 </div>

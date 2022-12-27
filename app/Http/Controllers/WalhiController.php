@@ -53,4 +53,16 @@ class WalhiController extends Controller
             'title' => 'Faq'
         ]);
     }
+    public function login()
+    {
+        return view('pages.loginform', [
+            'title' => 'Login'
+        ]);
+    }
+    public function register()
+    {
+        return view('pages.registerform', [
+            'title' => 'Register'
+        ]);
+    }
 }
