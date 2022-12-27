@@ -15,7 +15,9 @@ class LaporController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.lapor_admin', [
+            'title' => 'Lapor'
+        ]);
     }
 
     /**

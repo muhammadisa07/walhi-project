@@ -15,7 +15,9 @@ class DatapetaController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.datapeta_admin', [
+            'title' => 'DataPeta'
+        ]);
     }
 
     /**
