@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WalhiController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ Route::get('/login', [WalhiController::class, 'login']);
 Route::get('/register', [WalhiController::class, 'register']);
 
 // controller admin
-Route::get('/admin/dashboard', [AdminController::class, 'dashboard']);
+Route::get('/admin/dashboard', [DashboardController::class, 'dashboard']);
 Route::get('/admin/artikel', [AdminController::class, 'artikel']);
 Route::get('/admin/datapeta', [AdminController::class, 'datapeta']);
 Route::get('/admin/lapor', [AdminController::class, 'lapor']);
