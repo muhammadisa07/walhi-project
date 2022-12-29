@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Artikel;
 use Illuminate\Http\Request;
 
 class WalhiController extends Controller
@@ -9,7 +9,8 @@ class WalhiController extends Controller
     public function index()
     {
         return view('pages.home', [
-            'title' => 'Home'
+            'title' => 'Home',
+            'artikels' => Artikel::latest()->paginate(3)
         ]);
     }
     // menampilkan halaman PeduliLingkungan
@@ -30,13 +31,25 @@ class WalhiController extends Controller
     public function Artikel()
     {
         return view('pages.artikel', [
-            'title' => 'Artikel'
+            'title' => 'Artikel',
+            'artikels' => Artikel::latest()->paginate(6)
         ]);
     }
-    public function DetailArtikel()
+
+    public function DetailArtikel($id)
     {
+        
         return view('pages.detailartikel', [
-            'title' => 'Artikel'
+            'title' => 'Artikel',
+            'artikel' => Artikel::find($id) 
+        ]);
+    }
+    public function AllArtikel()
+    {
+        
+        return view('pages.Allartikel', [
+            'title' => 'Artikel',
+            'artikels' => Artikel::all()
         ]);
     }
     // menampilkan halaman laporan

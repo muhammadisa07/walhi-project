@@ -7,7 +7,7 @@
 <section class="plingkungan pt-36">
     <div class="container">
     <div class="max-w-xl mx-auto text-center mt-10">
-      <h1 class="font-bold text-3xl font-Inter text-green2 md:text-3xl lg:text-5xl mb-14">ARTIKEL </h1>     
+      <h1 class="font-bold text-3xl font-Inter text-green2 md:text-3xl lg:text-5xl mb-14">SEMUA ARTIKEL </h1>     
       <h1 class="font-bold text-xl font-Inter text-white md:text-3xl lg:text-3xl mt-2 mb-16 ">NEWS </h1>      
     </div>
     </div>
@@ -37,10 +37,6 @@
         <span class=" mt-5 flex text-sm text-white font-semibold">{{ $artikel->created_at->format('m/d/Y') }}</span>
       </div>
     @endforeach
-     <div class="max-w-xl mx-auto text-center mt-10">
-      <a href="/artikel/all" class="text-base font-semibold text-black font-Inter bg-green2 py-3 px-8 rounded-full hover:shadow-lg  hover:opacity-80 transition duration-300 ease-in-out ">Lihat Lebih Banyak</a>
-    </div>
-    </div>
     @else
      <div class="w-full px-4 mb-10 text-white font-semibold">
       <h1 class="font-bold mb-5 text-white mt-5 font-Inter text-xl text-center ">Tidak Ada Data Artikel</h1>

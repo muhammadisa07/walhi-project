@@ -22,6 +22,7 @@ class User extends Authenticatable
     //     'email',
     //     'password',
     // ];
+    public $timestamps = true;
     protected $guarded =['id'];
 
     /**

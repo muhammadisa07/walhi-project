@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Lapor extends Model
 {
     use HasFactory;
+    public $timestamps = true;
     protected $guarded =['id'];
 }

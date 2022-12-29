@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('deskripsi');
             $table->string('excerpt');
             $table->string('penulis');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

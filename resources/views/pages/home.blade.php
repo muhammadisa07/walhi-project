@@ -56,7 +56,7 @@
     <div class="w-full self-start px-4 mb-10 lg:w-1/2">
     <h2 class="font-bold mb-5 text-white mt-5 font-Inter text-xl md:text-2xl lg:text-3xl">Dashboard Pantau Lingkungan</h2>
     <p class="font-semibold text-white  font-Inter text-base mb-14 md:text-base lg:text-xl">Dashboard Pantau Lingkungan  dikembangkan untuk memantau sebuah lingkungan yang terkena dampak pembuatan proyek di suatu wilayah tanpa izin ataupun dapat merusak kelestarian lingkungan yang ada berdasarkan data akurat untuk mengawasi wilayah yang terdampak di wilayah Indonesia dalam upaya melindungi alam dan menyingkirkan proyek ilegal yang tersebar dari sabang sampai merauke</p>
-    <a href="#" class="text-base font-semibold text-black font-Inter bg-green2 py-3 px-8 rounded-full hover:shadow-lg  hover:opacity-80 transition duration-300 ease-in-out">Lihat Dashboard</a>
+    <a href="/dashboard" class="text-base font-semibold text-black font-Inter bg-green2 py-3 px-8 rounded-full hover:shadow-lg  hover:opacity-80 transition duration-300 ease-in-out">Lihat Dashboard</a>
     </div>
     </div>
     </div>
@@ -72,30 +72,29 @@
       <h4 class="font-bold mb-5 text-xl font-Inter text-white md:text-2xl lg:text-3xl">Artikel</h4>
     </div>
     <div class="flex flex-wrap">
-    <div class="w-full px-4 mb-10 lg:w-1/3">
-    <h1 class="font-bold mb-5 text-white mt-5 font-Inter text-xl ">Judul Artikel 1</h1>
-    <p class="font-semibold text-white  font-Inter text-base mb-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestias aliquam corrupti reiciendis itaque modi! Culpa laborum consequatur fugit illum possimus alias deserunt hic, quod explicabo tempore sit voluptatem odit nobis dicta, illo corrupti accusantium corporis! Vero deserunt quos mollitia, earum atque, voluptatem est optio amet quasi rem aut accusantium?</p>
-      <small><a href="/home/artikel" class="text-green2 font-Inter font-semibold">Selengkapnya</a></small>
-       <span class=" mt-5 flex text-sm text-white font-semibold">09-11-2022</span>
+
+  @if($artikels->count())
+    @foreach ( $artikels as $artikel )
+    <div class="w-full px-4 mb-10 lg:w-1/3 text-white font-semibold">
+    <h1 class="font-bold mb-5 text-white mt-5 font-Inter text-xl ">{{ $artikel->judul }}</h1>
+    <p class="font-semibold text-white  font-Inter text-base mb-2 ">{!! $artikel->deskripsi !!}</p>
+      <small><a href="/artikel/{{ $artikel->id }}" class="text-green2 font-Inter font-semibold">Selengkapnya</a></small>
+       <span class=" mt-5 flex text-sm text-white font-semibold">{{ $artikel->created_at->format('m/d/Y') }}</span>
     </div>
-    <div class="w-full px-4 mb-10 lg:w-1/3">
-    <h1  class="font-bold mb-5 text-white mt-5 font-Inter text-xl">Judul Artikel 2</h1>
-    <p class="font-semibold text-white  font-Inter text-base mb-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestias aliquam corrupti reiciendis itaque modi! Culpa laborum consequatur fugit illum possimus alias deserunt hic, quod explicabo tempore sit voluptatem odit nobis dicta, illo corrupti accusantium corporis! Vero deserunt quos mollitia, earum atque, voluptatem est optio amet quasi rem aut accusantium?</p>
-    <small><a href="/home/artikel" class="text-green2 font-Inter font-semibold">Selengkapnya</a></small>
-     <span class=" mt-5 flex text-sm text-white font-semibold ">09-11-2022</span>
+    @endforeach
+  <div class="max-w-xl mx-auto text-center mt-10">
+      <a href="/artikel" class="text-base font-semibold text-black font-Inter bg-green2 py-3 px-8 rounded-full hover:shadow-lg  hover:opacity-80 transition duration-300 ease-in-out ">Lihat Selengkapnya</a>
     </div>
-    <div class="w-full px-4 lg:w-1/3">
-    <h1  class="font-bold mb-5 text-white mt-5 font-Inter text-xl ">Judul Artikel 3</h1>
-    <p class="font-semibold text-white  font-Inter text-base mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestias aliquam corrupti reiciendis itaque modi! Culpa laborum consequatur fugit illum possimus alias deserunt hic, quod explicabo tempore sit voluptatem odit nobis dicta, illo corrupti accusantium corporis! Vero deserunt quos mollitia, earum atque, voluptatem est optio amet quasi rem aut accusantium?</p>
-      <small><a href="/home/artikel" class="text-green2 font-Inter font-semibold">Selengkapnya</a> </small>
-      <span class=" mt-5 flex text-sm text-white font-semibold ">09-11-2022</span>
-      </div>
     </div>
+  @else
+  <div class=" px-4 mb-10 w-full text-white font-semibold">
+    <h1 class="font-semibold text-white  font-Inter mb-2 text-center ">Tidak Ada Data Artikel</h1>
+    </div>
+
     
-     <div class="max-w-xl mx-auto text-center mt-10">
-      <a href="#" class="text-base font-semibold text-black font-Inter bg-green2 py-3 px-8 rounded-full hover:shadow-lg  hover:opacity-80 transition duration-300 ease-in-out ">Lihat Selengkapnya</a>
-    </div>
-    </div>
+  @endif
+
+   
 </section>
 {{-- End Section Artikel --}}
 

@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Datapeta extends Model
 {
     use HasFactory;
+    public $timestamps = true;
     protected $guarded =['id'];
 }
