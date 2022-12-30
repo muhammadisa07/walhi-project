@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Datapeta extends Model
+class Wuip extends Model
 {
     use HasFactory;
     public $timestamps = true;
     protected $guarded =['id'];
+
 }

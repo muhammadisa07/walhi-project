@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\WalhiController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RegisterController;
 
 
@@ -38,10 +39,11 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-
-// Route::get('/admin/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 // Route::get('/admin/artikel', [ArtikelController::class, 'index'])->middleware('auth');
-// Route::get('/admin/datapeta', [DatapetaController::class, 'index'])->middleware('auth');
-// Route::get('/admin/lapor', [LaporController::class, 'index'])->middleware('auth');
+
 
 Route::resource('/admin/artikel', ArtikelController::class)->middleware('auth');
+// Route::resource('/admin/artikel', ArtikelController::class)->middleware('auth');
+// Route::resource('/admin/artikel', ArtikelController::class)->middleware('auth');// Route::get('/admin/lapor', [LaporController::class, 'index'])->middleware('auth');
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+// Route::get('/admin/lapor', [LaporController::class, 'index'])->middleware('auth');

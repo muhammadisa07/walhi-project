@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('datapetas', function (Blueprint $table) {
+        Schema::create('wuip', function (Blueprint $table) {
             $table->id();
-            $table->string('tahun');
-            $table->string('ancaman');
-            $table->string('wilayah');
-            $table->string('kategori');
-            $table->string('datapeta');
+            $table->string('nama_perusahaan');
+            $table->string('luas_sk');
+            $table->string('komoditas');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('datapetas');
+        Schema::dropIfExists('wuip');
     }
 };

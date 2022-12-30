@@ -13,13 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lapors', function (Blueprint $table) {
+        Schema::create('psn', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_proyek');
             $table->string('lokasi');
-            $table->string('peristiwa');
-            $table->string('organisasi');
-            $table->string('media');
-            $table->string('kontak');
+            $table->string('ancaman');
+            $table->string('deskripsi');
+            $table->string('luas_terdampak');
+            $table->string('jiwa_terdampak');
+            $table->string('aktor');
+            $table->string('sumber_dana');
             $table->timestamps();
         });
     }
@@ -31,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lapors');
+        Schema::dropIfExists('psn');
     }
 };

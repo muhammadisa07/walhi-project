@@ -77,7 +77,7 @@
     @foreach ( $artikels as $artikel )
     <div class="w-full px-4 mb-10 lg:w-1/3 text-white font-semibold">
     <h1 class="font-bold mb-5 text-white mt-5 font-Inter text-xl ">{{ $artikel->judul }}</h1>
-    <p class="font-semibold text-white  font-Inter text-base mb-2 ">{!! $artikel->deskripsi !!}</p>
+    <p class="font-semibold text-white  font-Inter text-base mb-2 ">{{  $artikel->excerpt  }}</p>
       <small><a href="/artikel/{{ $artikel->id }}" class="text-green2 font-Inter font-semibold">Selengkapnya</a></small>
        <span class=" mt-5 flex text-sm text-white font-semibold">{{ $artikel->created_at->format('m/d/Y') }}</span>
     </div>

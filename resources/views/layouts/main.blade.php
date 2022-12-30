@@ -11,8 +11,7 @@
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery-3.6.1.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('build/assets/app.c7a61920.js') }}"></script>
-  <link rel="stylesheet" href="{{ asset('build/assets/app.dd2d5278.css')}}">
+  @vite('resources/css/app.css')
 
   <title >Walhi | {{ $title }} </title>
 </head>

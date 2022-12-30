@@ -41,7 +41,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                
+                 <div class="sidebar-brand-icon rotate-n-15">
+                    {{-- <i class="fa-solid fa-earth-asia"></i> --}}
+                    <img src="{{ asset('images/logo/walhi-logo.png') }}" alt="" style="height: 40px; width:40px">
+                </div>
                 <div class="sidebar-brand-text mx-3">PANTAU LINGKUNGAN</div>
             </a>
 
@@ -74,11 +77,22 @@
             <div class="sidebar-heading">
                 Data Peta
             </div>
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/datapeta">
+          <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-map-location-dot"></i>
-                    <span>Data Peta</span></a>
+                    <span>Data Peta</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Data Peta:</h6>
+                        <a class="collapse-item" href="buttons.html">PSN</a>
+                        <a class="collapse-item" href="cards.html">WUIP</a>
+                        <a class="collapse-item" href="cards.html">BENCANA</a>
+                    </div>
+                </div>
             </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">

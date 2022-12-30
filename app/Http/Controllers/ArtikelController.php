@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Artikel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+
 
 class ArtikelController extends Controller
 {
@@ -55,6 +57,7 @@ class ArtikelController extends Controller
             $validatedData['image'] = $request->file('image')->store('artikel_images');
         }
 
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->deskripsi), 100);
         Artikel::create($validatedData);
         return redirect('/admin/artikel')->with('success', 'Tambah Data Artikel Berhasil');
 
@@ -108,6 +111,7 @@ class ArtikelController extends Controller
             $validatedData['image'] = $request->file('image')->store('artikel_images');
         }
 
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->deskripsi), 100);
         Artikel::where('id', $artikel->id)->update($validatedData);
         return redirect('/admin/artikel')->with('success', 'Edit Data Artikel Berhasil');
     }
