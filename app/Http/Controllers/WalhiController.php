@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Artikel;
+use App\Models\Lapor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Lang;
 
 class WalhiController extends Controller
 {
@@ -59,6 +61,20 @@ class WalhiController extends Controller
             'title' => 'Lapor'
         ]);
     }
+    public function store(Request $request){
+        $validasi = $request->validate([
+            'lokasi' => 'required',
+            'peristiwa' => 'required',
+            'organisasi' => 'required',
+            'media' => 'required',
+            'kontak' => 'required',
+        ]);
+        Lapor::create($validasi);
+        return redirect('/lapor')->with('success', 'Laporan Telah Dikirim');
+    }
+
+
+
     // menampilkan halaman faq
     public function Faq()
     {

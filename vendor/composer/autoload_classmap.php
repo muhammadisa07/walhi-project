@@ -172,7 +172,6 @@ return array(
     'Database\\Seeders\\BencanaSeeder' => $baseDir . '/database/seeders/BencanaSeeder.php',
     'Database\\Seeders\\DatabaseSeeder' => $baseDir . '/database/seeders/DatabaseSeeder.php',
     'Database\\Seeders\\DatapetaSeeder' => $baseDir . '/database/seeders/DatapetaSeeder.php',
-    'Database\\Seeders\\LaporSeeder' => $baseDir . '/database/seeders/LaporSeeder.php',
     'Database\\Seeders\\PostArtikelSeeder' => $baseDir . '/database/seeders/PostArtikelSeeder.php',
     'Database\\Seeders\\PsnSeeder' => $baseDir . '/database/seeders/PsnSeeder.php',
     'Database\\Seeders\\WuipSeeder' => $baseDir . '/database/seeders/WuipSeeder.php',

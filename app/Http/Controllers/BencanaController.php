@@ -14,7 +14,10 @@ class BencanaController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.datapeta.bencana.index',[
+            'title' => 'Data Bencana',
+            'bencana' => Bencana::all()
+        ]);
     }
 
     /**
@@ -24,7 +27,10 @@ class BencanaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.datapeta.bencana.create',[
+            'title' => 'Tambah Data Bencana',
+            'bencana' => Bencana::all()
+        ]);
     }
 
     /**
@@ -35,7 +41,13 @@ class BencanaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'wilayah' => 'required|max:255',
+            'bencana' => 'required|max:255'
+        ]);
+
+        Bencana::create($validatedData);
+        return redirect('/admin/datapeta/bencana')->with('success', 'Tambah Data Bencana Berhasil');
     }
 
     /**
@@ -57,7 +69,10 @@ class BencanaController extends Controller
      */
     public function edit(Bencana $bencana)
     {
-        //
+        return view('admin.pages.datapeta.bencana.edit',[
+            'title' => 'Edit Data Bencana',
+            'bencana' => $bencana
+        ]);
     }
 
     /**
@@ -69,7 +84,15 @@ class BencanaController extends Controller
      */
     public function update(Request $request, Bencana $bencana)
     {
-        //
+        $validatedData = $request->validate([
+            'wilayah' => 'required|max:255',
+            'bencana' => 'required|max:255',
+        ]);
+
+      
+
+        Bencana::where('id', $bencana->id)->update($validatedData);
+        return redirect('/admin/datapeta/bencana')->with('success', 'Edit Data Bencana Berhasil');
     }
 
     /**
@@ -80,6 +103,7 @@ class BencanaController extends Controller
      */
     public function destroy(Bencana $bencana)
     {
-        //
+        Bencana::destroy($bencana->id);
+        return redirect('/admin/datapeta/bencana')->with('success', 'Hapus Data Bencana Berhasil');
     }
 }

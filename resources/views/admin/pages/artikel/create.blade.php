@@ -24,7 +24,7 @@
                                         </div>
                                      <div class="form-group">
                                           <label for="penulis">Penulis</label>
-                                             <input type="text" name="penulis" class="form-control @error('penulis') is-invalid @enderror" id="penulis" placeholder="Penulis" value="{{ old('judul') }}">
+                                             <input type="text" name="penulis" class="form-control @error('penulis') is-invalid @enderror" id="penulis" placeholder="Penulis" value="{{ old('penulis') }}">
                                                <div class="invalid-feedback">
                                             @error('penulis')
                                                 {{ $message }}

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('artikels', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->string('deskripsi',1000);
+            $table->string('deskripsi',1500);
             $table->string('excerpt');
             $table->string('penulis');
             $table->string('image')->nullable();

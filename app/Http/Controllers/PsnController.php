@@ -14,7 +14,10 @@ class PsnController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.datapeta.psn.index',[
+            'title' => 'Data Proyek Strategis Nasional',
+            'psn' => Psn::all()
+        ]);
     }
 
     /**
@@ -24,7 +27,10 @@ class PsnController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.datapeta.psn.create',[
+            'title' => 'Tambah Data Psn',
+            'bencana' => Psn::all()
+        ]);
     }
 
     /**
@@ -57,7 +63,10 @@ class PsnController extends Controller
      */
     public function edit(Psn $psn)
     {
-        //
+        return view('admin.pages.datapeta.psn.edit',[
+            'title' => 'Edit Data Psn',
+            'psn' => $$psn
+        ]);
     }
 
     /**

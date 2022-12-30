@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lapor;
-use App\Http\Requests\StoreLaporRequest;
-use App\Http\Requests\UpdateLaporRequest;
+use Illuminate\Http\Request;
 
 class LaporController extends Controller
 {
@@ -15,7 +14,10 @@ class LaporController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.lapor.index',[
+            'title' => 'Lapor',
+            'lapor' => Lapor::all()
+        ]);
     }
 
     /**
@@ -31,10 +33,10 @@ class LaporController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreLaporRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreLaporRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -64,11 +66,11 @@ class LaporController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateLaporRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Lapor  $lapor
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateLaporRequest $request, Lapor $lapor)
+    public function update(Request $request, Lapor $lapor)
     {
         //
     }
@@ -81,6 +83,7 @@ class LaporController extends Controller
      */
     public function destroy(Lapor $lapor)
     {
-        //
+        Lapor::destroy($lapor->id);
+        return redirect('/admin/lapor')->with('success', 'Laporan Berhasil Dihapus');
     }
 }

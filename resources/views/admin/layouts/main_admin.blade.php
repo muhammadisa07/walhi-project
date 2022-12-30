@@ -86,9 +86,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data Peta:</h6>
-                        <a class="collapse-item" href="buttons.html">PSN</a>
-                        <a class="collapse-item" href="cards.html">WUIP</a>
-                        <a class="collapse-item" href="cards.html">BENCANA</a>
+                        <a class="collapse-item" href="/admin/datapeta/bencana">BENCANA</a>
+                        <a class="collapse-item" href="/admin/datapeta/psn">PSN</a>
+                        <a class="collapse-item" href="/admin/datapeta/wuip">WUIP</a>
                     </div>
                 </div>
             </li>

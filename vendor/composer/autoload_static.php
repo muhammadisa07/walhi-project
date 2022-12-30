@@ -671,7 +671,6 @@ class ComposerStaticInit5245fae73be1005b2123b43d98429c62
         'Database\\Seeders\\BencanaSeeder' => __DIR__ . '/../..' . '/database/seeders/BencanaSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\DatapetaSeeder' => __DIR__ . '/../..' . '/database/seeders/DatapetaSeeder.php',
-        'Database\\Seeders\\LaporSeeder' => __DIR__ . '/../..' . '/database/seeders/LaporSeeder.php',
         'Database\\Seeders\\PostArtikelSeeder' => __DIR__ . '/../..' . '/database/seeders/PostArtikelSeeder.php',
         'Database\\Seeders\\PsnSeeder' => __DIR__ . '/../..' . '/database/seeders/PsnSeeder.php',
         'Database\\Seeders\\WuipSeeder' => __DIR__ . '/../..' . '/database/seeders/WuipSeeder.php',

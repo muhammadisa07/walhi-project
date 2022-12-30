@@ -14,7 +14,10 @@ class WuipController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.datapeta.wuip.index',[
+            'title' => 'Data Wilayah Izin Usaha Pertambangan',
+            'wuip' => Wuip::all()
+        ]);
     }
 
     /**
@@ -24,7 +27,10 @@ class WuipController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.datapeta.wuip.create',[
+            'title' => 'Tambah Data Wuip',
+            'bencana' => Wuip::all()
+        ]);
     }
 
     /**
@@ -35,7 +41,14 @@ class WuipController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_perusahaan' => 'required|max:255',
+            'luas_sk' => 'required|max:255',
+            'komoditas' => 'required|max:255'
+        ]);
+
+        Wuip::create($validatedData);
+        return redirect('/admin/datapeta/wuip')->with('success', 'Tambah Data Wuip Berhasil');
     }
 
     /**
@@ -57,7 +70,10 @@ class WuipController extends Controller
      */
     public function edit(Wuip $wuip)
     {
-        //
+        return view('admin.pages.datapeta.wuip.edit',[
+            'title' => 'Edit Data Wuip',
+            'wuip' => $wuip
+        ]);
     }
 
     /**
@@ -69,7 +85,16 @@ class WuipController extends Controller
      */
     public function update(Request $request, Wuip $wuip)
     {
-        //
+        $validatedData = $request->validate([
+            'nama_perusahaan' => 'required|max:255',
+            'luas_sk' => 'required|max:255',
+            'komoditas' => 'required|max:255'
+        ]);
+
+      
+
+        Wuip::where('id', $wuip->id)->update($validatedData);
+        return redirect('/admin/datapeta/wuip')->with('success', 'Edit Data Wuip Berhasil');
     }
 
     /**
@@ -80,6 +105,7 @@ class WuipController extends Controller
      */
     public function destroy(Wuip $wuip)
     {
-        //
+        Wuip::destroy($wuip->id);
+        return redirect('/admin/datapeta/wuip')->with('success', 'Hapus Data Wuip Berhasil');
     }
 }
